@@ -1,0 +1,912 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:black;
+    height: 100vh;
+}
+#preLoader{
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(#353434 0.5px, #000000 0.5px);
+    background-size: 10px 10px;
+    position: fixed;
+    z-index: 100;  
+}
+#preLoader > .preLoader-h2{
+    color: #0c0c0c;
+    font-weight: 400;
+    font-size: 40px;
+    -webkit-text-stroke: 1px rgb(32, 200, 32);
+    position: relative;
+    left: 50px;
+    letter-spacing: 15px;
+    text-decoration: none;
+}
+#preLoader > p{
+    margin-top: 50px;
+    font-weight: 200;
+    font-size: 15px;
+    position: relative;
+    left: 50px;
+    letter-spacing: 5px;
+}
+
+.material-symbols-outlined{
+    margin: 10px;
+}
+
+.main{
+    display: flex;
+}
+
+.first{
+    background-color: rgb(12, 12, 12);
+    width: 430px;
+    height: 100px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    border-radius: 10px;
+    font-weight: 200;
+}
+.second-div{
+    background-color: rgba(0, 0, 0, 0.983);
+    width: 430px;
+    /* height: 430px; */
+    margin-left: 8px;
+    border-radius: 10px;
+    height: 480px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-weight: 300;
+}
+.second-div::-webkit-scrollbar{
+    background-color:rgba(0, 0, 0, 0.983);
+    width: 4px;
+}
+.second-div::-webkit-scrollbar-thumb{
+    background-color: #1f2020;
+    width: 5px;
+}
+.right{
+    /* background-image: linear-gradient(10deg ,rgb(20, 20, 20)50%,rgb(64, 25, 142) );  */
+    margin-left: 8px;
+    border-radius: 10px;
+    width: 1080px;
+    height: 590px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc(100vh - 17vh);
+    /* margin-bottom: 10px; */
+}
+.right::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.983);
+    width: 8px;
+}
+.right::-webkit-scrollbar-thumb{
+    background-color: #393a39;
+}
+.main-banner{
+    display: flex;
+    overflow-x:scroll;
+    margin: 20px 20px 10px 20px;
+    scroll-snap-type: x mandatory;
+}
+.main-banner::-webkit-scrollbar{
+   width: 10px;
+}
+.banner{
+  flex-shrink: 0;
+  width: 880px !important;
+   display: flex;
+   padding: 20px;
+   margin: 5px;
+   animation-name: bannerPallete;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+   /* background-image: linear-gradient(to right top ,rgba(0, 0, 0, 0.641) 55%,rgb(55, 23, 120) ); */
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   scroll-snap-align:center ;
+}
+@keyframes bannerPallete {
+    0% {
+        background-image: linear-gradient(360deg ,rgba(0, 0, 0, 0.983)70%,rgb(33, 8, 83) );
+    }
+    25% {
+        background-image: linear-gradient(360deg ,rgba(0, 0, 0, 0.983)70%,rgb(90, 9, 9) );
+    }
+    50% {
+        background-image: linear-gradient(360deg ,rgba(0, 0, 0, 0.983)70%,rgb(10, 90, 30) );
+    }
+    75% {
+        background-image: linear-gradient(360deg ,rgba(0, 0, 0, 0.983)70%,rgb(106, 117, 30) );
+    }
+    100% {
+        background-image: linear-gradient(360deg ,rgba(0, 0, 0, 0.983)70%,rgb(9, 60, 88) );
+    }
+  }
+
+.img1{
+    margin-right: 15px;
+}
+
+.banner-text > h1{
+   font-size: 60px;
+   word-spacing: 2px;
+   letter-spacing: 2px;
+   font-weight: 500;
+}
+.banner-text > h1:hover{
+    text-decoration: underline;
+}
+
+.banner-text > h5{
+ letter-spacing: 2px;
+ font-weight: 300;
+}
+
+.btns{
+    display: flex;
+    align-items: end;
+    margin: 30px 0px;
+}
+
+.img1 , .banner-text , h5 , h1 , .btns , .btn1 , .btn2 , .dots{
+    background: none;
+}
+.but{
+ width: 100px;
+ height: 45px;
+ background-color: #06e28d;
+ color: black;
+ border: none;
+ font-size: 16px;
+ border-radius: 22px;
+ margin-right: 20px;
+ cursor: pointer;
+}
+.but:hover{
+   background-color: #3b3b3b99;
+   color:rgb(95, 245, 95);
+}
+
+.follow{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.745);
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.dots > .material-symbols-outlined{
+    color: rgba(255, 255, 255, 0.648);
+    margin-left: 0;
+    background: none;
+    cursor: pointer;
+ }
+
+h2{
+    margin-left: 20px;
+    background: none;
+    font-size: 30px;
+    font-weight: 300;
+ }
+ h2:hover{
+    text-decoration: underline;
+ }
+
+.songs{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    column-gap: 10px;
+    background: none;
+    margin-right: 20px;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.song{
+    margin: 20px 0px 0px 0px;
+    background-color:rgba(36, 36, 36, 0.875);
+    border-radius: 5px;
+    height: 80px;
+    cursor: pointer;
+}
+.song:hover{
+    transition: all 0.8s ease-out;
+    background-color: rgba(74, 73, 74, 0.629);
+}
+.song .play-img{
+   display: none;
+}
+
+.song .song-text{
+    background: none;
+    position: relative;
+    bottom: 38px;
+    margin-left: 7px;
+    font-weight: 300;
+}
+
+.song img{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.first-div{
+    background: none;
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+}
+.first-div  span{
+    background: none;
+}
+.first-text1{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+.first-text{
+    position: relative;
+    bottom: 5px;
+    background:none;
+    text-decoration: none;
+    font-weight: 300;
+    color: gray;
+}
+.first-text:hover{
+  color: white;
+}
+
+.library ,.playlist, .recent{
+    display: flex;
+    background: none;
+    padding-top: 8px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.playlist{
+    padding-top: 1px;
+}
+.lib-play-div{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:rgb(9, 9, 9);
+    box-shadow: rgb(34, 34, 34) 1px 1px 15px 0px;
+}
+
+.library>div , .recent>div{
+    background: none;
+}
+.library{
+    display: flex;
+    justify-content: space-between;
+}
+.library .select-add{
+    background-color: rgba(0, 0, 0, 0.983);
+}
+.inside-content1{
+    position: relative;
+    bottom: 7px;
+    left: 5px;
+    color: gray;
+    cursor: pointer;
+}
+.inside-content{
+    position: relative;
+    bottom: 6px;
+    left: 260px;
+    color: gray;
+    cursor: pointer;
+}
+.inside-content:hover , .inside-content1:hover{
+    color: white;
+}
+.recent{
+    display: flex;
+    justify-content: space-between;
+}
+.add , .dropdown , .favorite , .search-icn , .three-dot , .library-icn,.search2{
+    cursor: pointer;
+    color: gray;
+}
+.butt{
+    background-color:rgb(35, 35, 35);
+    border: none;
+    border-radius: 22px;
+    width: 80px;
+    height: 35px;
+    margin-left: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 300;
+}
+.butt:hover{
+    background-color: rgba(74, 73, 73, 0.525);
+    transition: all 0.2s ease-out;
+}
+.playlist div{
+    background: none;
+}
+span{
+    background: none;
+}
+.song-container , .pin-sec{
+    display: flex;
+}
+.song-container:hover{
+    transition: all 0.8s ease-out;
+    background-color: rgba(74, 73, 74, 0.629);
+}
+.imgg > img{
+    border-radius: 50%;
+}
+.imgg{
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.song-text p{
+    margin-top: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.pin{
+    color: rgb(10, 186, 62);
+    transform: rotate(20deg);
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+.art{
+    position: relative;
+    top: 4px;
+    font-size: 15px;
+    color: rgb(139, 137, 137);
+    cursor: pointer;
+}
+
+/* footer */
+.footer{
+    
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+.foot1{
+   display: flex;
+   margin: 15px 20px;
+   align-items: center;
+   font-size: 14px; 
+   gap: 20px;
+}
+#p2{
+    font-size: 12px;
+    color: gray;
+}
+.favorite{
+    color: gray;
+}
+.foot1 img{
+    border-radius: 5px;
+    width: 52px;
+    /* margin-right: 20px; */
+}
+.up{
+  margin-left: 170px;
+  
+}
+.up > span{
+    width: 30px;
+    font-size: 30px;
+}
+.shuffle , .previous , .next , .repeat{
+    color: gray;
+    cursor: pointer;
+}
+.repeat{
+    color: #06e28d;
+    cursor: pointer;
+}
+.down{
+ display: flex;
+ margin-bottom:12px;
+} 
+ .play-line{
+    width: 500px;
+    background-color: #2d2d2d;
+    height: 3px;
+    margin-top: 4px;
+} 
+.play-time{
+    font-size: 13px;
+    color: gray;
+    margin: -5px 10px;
+}
+
+.foot3{
+    margin-left: 100px;
+}
+.foot3 > span{
+    color: gray;
+    cursor: pointer;
+}
+
+/* hover */
+.shuffle:hover , .previous:hover , .next:hover , .repeat:hover,
+.favorite:hover , .add:hover , .dropdown:hover , .home:hover , 
+.search-icn:hover, .library-icn:hover, .search2:hover, .three-dot:hover {
+    color: white;
+}
+.down>span:hover{
+   color: white;
+   cursor: pointer;
+}
+.foot3>span:hover{
+    color: white;
+}
+.favorite:active{
+    color:red;
+}
+
+/* Sec 2 Made for Prajwal */
+
+.heading2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.heading2:hover{
+    text-decoration: underline;
+}
+.heading2 h5{
+    margin-right: 20px;
+    margin-top: 10px;
+    color: gray;
+}
+.prajwal-cards{
+    /* margin-left: 20px;
+    margin-right: 12px; */
+    margin: 20px 12px 15px 20px;
+    display: flex;
+}
+.card{
+    /* border: 1px solid white; */
+    background-color: #1e1e1ed5;
+    width: 200px;
+    height: 275px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+    /* margin-left: 20px; */
+}
+.card img{
+    margin: 15px;
+    border-radius: 5px;
+}
+.card h4{
+    margin-left: 15px;
+    font-weight: 300;
+}
+.card p{
+    margin-left: 15px;
+    padding-bottom: 10px;
+    font-weight: 200;
+    color: gray;
+    font-size: 13px;
+}
+.card:hover{
+   background-color: rgba(61, 61, 61, 0.719);
+   transition: all 0.3s ease-in;
+   cursor: pointer;
+   
+}
+.cards-img-btn{
+    position: relative;
+    bottom: 180px;
+    left: 120px;
+    width: 55px;
+    cursor: pointer;
+    visibility: hidden;
+}
+.card:hover .cards-img-btn{
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}
+
+.artist-fav{
+    border-radius: 50% !important; 
+}
+
+
+/* Media Queires */
+@media (max-width:300px){
+    body{
+        background-color:rgba(220, 20, 20, 0.983);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .first , .second-div , .main-banner{
+       display: none;
+    }
+    .right{
+        animation: none;
+        border-radius: 0;
+    }
+    .right::-webkit-scrollbar{
+        width: 5px;
+    }
+    h2{
+        font-size:15px;
+        margin-left: 5px;
+    }
+    h5{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .song{
+        height: 50px;
+        width: 180px;
+        margin-top: 8px;
+        background-color: #121212;
+    }
+    .song-text{
+        display: flex;
+        position: relative;
+        left: 50px;
+        /* text-align: center; */
+    }
+    .song > img{
+        width: 50px;
+    }
+    .prajwal-cards{
+        margin-left: 5px;
+        overflow-x: scroll;
+        height: 110px;
+        overflow-y: hidden;
+    }
+    .prajwal-cards::-webkit-scrollbar{
+       display: none;
+    }
+    .card{
+        height: 150px;
+        border-radius: 0;
+        text-align: start;
+        background: none;
+    }
+    .card > h4{
+        font-size: 10px;
+        position: relative;
+        margin-top: 2px;
+        right: 10px;
+    }
+    .card>p{
+        font-size: 8px;
+        position: relative;
+        right: 10px;
+        padding-bottom: 0px;
+    }
+    .card > img{
+      width: 75px;
+      margin: 0px;
+      border-radius: 0px;
+    }
+    .card > svg{
+        display:none;
+    }
+    .praj-cards{
+        background: none;
+    }
+    .artist-fav{
+        width:75px !important;
+    }
+    .footer{
+        display: flex;
+        background-color: #000000;
+        position: sticky;
+        bottom: 0;
+        height: 60px;
+        margin-top: 5px;
+        box-shadow: 0 -5px 5px -5px #828181;
+    }
+    .foot1{
+        margin: 2px 3px 0px 3px;
+    }
+    .foot-img > img{
+        width: 40px;
+        margin-left: 10px;
+    }
+    .foot-text > p{
+        font-size: 10px; 
+    }
+    .foot-text  #p2{
+        font-size: 8px;
+    }
+    .foot-icon > span{
+        position: relative;
+        left: 60px;
+        font-size: 18px;
+    }
+    .play-line , .play-time , .up , .foot3{
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    /* CSS rules for small screens */
+    body{
+        background-color:rgba(0, 0, 0, 0.983);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .first , .second-div , .main-banner{
+       display: none;
+    }
+    .right{
+        animation: none;
+        border-radius: 0;
+    }
+    .right::-webkit-scrollbar{
+        width: 5px;
+    }
+    h2{
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    h5{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .songs{
+        display: grid !important ;
+        grid-template-columns: repeat(2, 1fr) !important;
+        margin-right: 8px !important;
+        
+    }
+    .song{
+        height: 50px;
+        width: 180px;
+        margin-top: 8px;
+        background-color: #121212;
+    }
+    .song-text{
+        display: flex;
+        position: relative;
+        left: 50px;
+        /* text-align: center; */
+    }
+    .song > img{
+        width: 50px;
+    }
+    .prajwal-cards{
+        margin-left: 5px;
+        overflow-x: scroll;
+        height: 110px;
+        overflow-y: hidden;
+    }
+    .prajwal-cards::-webkit-scrollbar{
+       display: none;
+    }
+    .card{
+        height: 150px;
+        border-radius: 0;
+        text-align: start;
+        background: none;
+    }
+    .card > h4{
+        font-size: 10px;
+        position: relative;
+        margin-top: 2px;
+        right: 10px;
+    }
+    .card>p{
+        font-size: 8px;
+        position: relative;
+        right: 10px;
+        padding-bottom: 0px;
+    }
+    .card > img{
+      width: 75px;
+      margin: 0px;
+      border-radius: 0px;
+    }
+    .card > svg{
+        display:none;
+    }
+    .praj-cards{
+        background: none;
+    }
+    .artist-fav{
+        width:75px !important;
+    }
+    .footer{
+        display: flex;
+        background-color: #000000;
+        position: sticky;
+        bottom: 0;
+        height: 60px;
+        margin-top: 5px;
+        box-shadow: 0 -5px 5px -5px #828181;
+    }
+    .foot1{
+        margin: 2px 3px 0px 3px;
+    }
+    .foot-img > img{
+        width: 40px;
+        margin-left: 10px;
+    }
+    .foot-text > p{
+        font-size: 10px; 
+    }
+    .foot-text  #p2{
+        font-size: 8px;
+    }
+    .foot-icon > span{
+        position: relative;
+        left: 60px;
+        font-size: 18px;
+    }
+    .play-line , .play-time , .up , .foot3{
+        display: none;
+    }
+  }
+  
+  /* Medium screens (between 577px and 768px) */
+  @media (max-width: 600px) {
+    /* CSS rules for medium screens */
+    body{
+        background-color:rgba(0, 0, 0, 0.983);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .first , .second-div , .main-banner{
+       display: none;
+    }
+    .right{
+        animation: none;
+        border-radius: 0;
+    }
+    .right::-webkit-scrollbar{
+        width: 5px;
+    }
+    h2{
+        font-size: 18px;
+        margin-left: 5px;
+    }
+    h5{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .songs{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 5px 5px 10px 5px;
+        font-size: 10px;
+    }
+    .songs::-webkit-scrollbar{
+        display: none;
+    }
+    .song{
+        height: 50px;
+        width: 190px;
+        margin-top: 8px;
+        background-color: #121212;
+    }
+    .song-text{
+        display: flex;
+        position: relative;
+        left: 50px;
+        /* text-align: center; */
+    }
+    .song > img{
+        width: 50px;
+    }
+    .prajwal-cards{
+        margin-left: 5px;
+        overflow-x: scroll;
+        height: 110px;
+        overflow-y: hidden;
+    }
+    .prajwal-cards::-webkit-scrollbar{
+       display: none;
+    }
+    .card{
+        height: 150px;
+        border-radius: 0;
+        text-align: start;
+        background: none;
+    }
+    .card > h4{
+        font-size: 10px;
+        position: relative;
+        margin-top: 2px;
+        right: 10px;
+    }
+    .card>p{
+        font-size: 8px;
+        position: relative;
+        right: 10px;
+        padding-bottom: 0px;
+    }
+    .card > img{
+      width: 75px;
+      margin: 0px;
+      border-radius: 0px;
+    }
+    .card > svg{
+        display:none;
+    }
+    .praj-cards{
+        background: none;
+    }
+    .artist-fav{
+        width:75px !important;
+    }
+    .footer{
+        display: flex;
+        background-color: #000000;
+        position: sticky;
+        bottom: 0;
+        height: 60px;
+        margin-top: 5px;
+        box-shadow: 0 -5px 5px -5px #828181;
+    }
+    .foot1{
+        margin: 2px 3px 0px 3px;
+    }
+    .foot-img > img{
+        width: 40px;
+        margin-left: 10px;
+    }
+    .foot-text > p{
+        font-size: 10px; 
+    }
+    .foot-text  #p2{
+        font-size: 8px;
+    }
+    .foot-icon > span{
+        position: relative;
+        left: 60px;
+        font-size: 18px;
+    }
+    .play-line , .play-time , .up , .foot3{
+        display: none;
+    }
+  }
+  
+  /* Large screens (between 769px and 992px) */
+  /* @media (min-width: 769px) and (max-width: 992px) { */
+    /* CSS rules for large screens */
+  /* } */
+  
+  /* Extra-large screens (between 993px and 1200px) */
+  /* @media (min-width: 993px) and (max-width: 1200px) { */
+    /* CSS rules for extra-large screens */
+  /* } */
+
+
+  /* .prajwal-cards{
+    overflow-x: scroll;
+    overflow-y: hidden;
+ }
+ .prajwal-cards::-webkit-scrollbar{
+     display: none;
+ /* } * 
